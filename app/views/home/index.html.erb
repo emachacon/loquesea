@@ -1,1 +1,6 @@
-Hola Eydi ;)
+XD
+<% if current_user %>
+Hola <%=current_user.nombre %>
+<% else %>
+<%=link_to "iniciar sesion",  new_user_session_path%>
+<% end %>
