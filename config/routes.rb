@@ -1,7 +1,9 @@
 Loquesea::Application.routes.draw do
   devise_for :users
 
-  resources :users, :except=>[:create, :new] 
+  resources :users do
+    resources :recetas
+      end
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
